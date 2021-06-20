@@ -33,7 +33,7 @@
         - php artisan migrate --seed Categoria
     2. Dar permiso al local storage
    	    - php artisan storage:link 
-     3. Limpiar Cache
+    3. Limpiar Cache
         - php artisan config:cache
     4. Generar llave 
         - php artisan key:generate
