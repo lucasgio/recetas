@@ -25,15 +25,13 @@
 
 <h6>Proceso de Instalación</h6>
 <p>Descargar el proyecto para tu pc local https://github.com/lucasgio/recetas.git</p>
-   
-
-    1. Generar migraciones 
-	   - php artisan migrate --seed Categoria
-	2. Dar permiso al local storage
-   	   - php artisan storage:link 
-	3. Limpiar Cache
-       - php artisan config:cache
-    4. Generar llave 
-		- php artisan key:generate
-	5. Correr app servidor
-		- php artisan serve
+ 1. Generar migraciones 
+    - php artisan migrate --seed Categoria
+ 2. Dar permiso al local storage
+   	- php artisan storage:link 
+ 3. Limpiar Cache
+    - php artisan config:cache
+ 4. Generar llave 
+    - php artisan key:generate
+ 5. Correr app servidor
+    - php artisan serve
