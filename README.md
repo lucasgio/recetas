@@ -10,10 +10,8 @@
 <h3>Recetas</h3>
 <h6>Repositorio de recetas</h6>
 <p>
-  Recetas es una aplicacion construida con Laravel MVC. 
-  La estructura de la aplicacion se basa en el Front-End con Blade y componentes Vuejs   que estan asociados con la Vistas.
-  Tiene un Routing compuesto por Resource Web Route con protocolo HTTP (GET-PUT-DELETE-PUT-POST).
-  Base de Datos MYSQL 
+  Recetas es una aplicación construida con Laravel MVC.
+  Tipo repositorio de recetas donde un usuario puede crearse una cuenta y añadir y editar nuevas recetas, las misma puede ser votadas por otros usuarios.  
 </p>
 
 <h6>Directorio de la aplicacion</h6>
