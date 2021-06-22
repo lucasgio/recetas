@@ -16,33 +16,33 @@ class Categoria extends Seeder
     {
         DB::table('categorias')->insert([
             'categoria'=>'Entrantes',
-            'created_at'=> date('Y-d-m H:i:s'),
-            'updated_at'=> date('Y-d-m H:i:s'),
+            'created_at'=>Carbon::now(),
+            'updated_at'=>Carbon::now(),
         ]);
         DB::table('categorias')->insert([
             'categoria'=>'Platos Fuerte',
-            'created_at'=> date('Y-d-m H:i:s'),
-            'updated_at'=> date('Y-d-m H:i:s'),
+            'created_at'=>Carbon::now(),
+            'updated_at'=>Carbon::now(),
         ]);
         DB::table('categorias')->insert([
             'categoria'=>'Dulces',
-            'created_at'=> date('Y-d-m H:i:s'),
-            'updated_at'=> date('Y-d-m H:i:s'),
+            'created_at'=>Carbon::now(),
+            'updated_at'=>Carbon::now(),
         ]);
         DB::table('categorias')->insert([
             'categoria'=>'Cremas y Lacteos',
-            'created_at'=> date('Y-d-m H:i:s'),
-            'updated_at'=> date('Y-d-m H:i:s'),
+            'created_at'=>Carbon::now(),
+            'updated_at'=>Carbon::now(),
         ]);
         DB::table('categorias')->insert([
             'categoria'=>'Jugos y Bebidas',
-            'created_at'=> date('Y-d-m H:i:s'),
-            'updated_at'=> date('Y-d-m H:i:s'),
+            'created_at'=>Carbon::now(),
+            'updated_at'=>Carbon::now(),
         ]);
         DB::table('categorias')->insert([
             'categoria'=>'Pastas Caseras',
-            'created_at'=> date('Y-d-m H:i:s'),
-            'updated_at'=> date('Y-d-m H:i:s'),
+            'created_at'=>Carbon::now(),
+            'updated_at'=>Carbon::now(),
         ]);
     }
 }

@@ -86,7 +86,7 @@
             </div>
         </nav>
         
-        @include('custom.menu')
+        @include('menu')
         @yield('hero')          
         <main class="py-4 mt-5 col-12">
             @yield('botones')

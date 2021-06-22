@@ -48,7 +48,7 @@
             </div>
         </div>
     @else
-        @include('custom.showinfo')
+        @include('showinfo')
     @endif
 
 

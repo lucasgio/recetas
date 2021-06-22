@@ -8,7 +8,7 @@
 @endsection
 
 @section('botones')
-    @include('custom.botonback')
+    @include('botonback')
 @endsection
 
 
@@ -18,7 +18,7 @@
     <div class="container-fluid">
         <h1 class="text-center mt-5 mb-5">Crear nueva Recetas</h1>
         <div class="row justify-content-center">
-            @include('custom.createformrecipies')
+            @include('createformrecipies')
         </div>
     </div>
 

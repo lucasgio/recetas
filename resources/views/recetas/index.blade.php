@@ -6,7 +6,7 @@
 
 
 @section('botones')    
-  @include('custom.botonesnavegacion')
+  @include('botonesnavegacion')
 @endsection
 
 @section('content')
@@ -32,7 +32,7 @@
             <td>{{$receta->categoria->categoria}}</td>
             <td>{{$receta->author->name}}</td>
             <td>
-              @include('custom.botonesopciones')
+              @include('botonesopciones')
             </td>
           </tr>
           @endforeach

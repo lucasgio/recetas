@@ -7,7 +7,7 @@
 @endsection
 
 @section('botones')
-    @include('custom.botonback')
+    @include('botonback')
 @endsection
 
 
@@ -16,7 +16,7 @@
     <div class="container">
         <div class="row justify-content-center mt-5">
             <div class="col-md-10 bg-white p-3">
-                @include('custom.editformperfil')
+                @include('editformperfil')
             </div>
         </div>
 
