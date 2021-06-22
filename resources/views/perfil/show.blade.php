@@ -48,7 +48,7 @@
             </div>
         </div>
     @else
-        @include('ui.dialogs.showinfo')
+        @include('custom.showinfo')
     @endif
 
 

@@ -3,7 +3,7 @@
 @section('content')
 
 @section('botones')
- @include('ui.navigation.botonback')
+ @include('custom.botonback')
 @endsection
 
 

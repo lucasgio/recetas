@@ -30,7 +30,7 @@
         <h2 class="titulo-categoria text-uppercase mt-5 mb-4 ">Últimas Recetas</h2>
         <div class="owl-carousel owl-theme">
             @foreach ($nuevas as $nueva)
-                @include('ui.inicio.ultimas')
+                @include('custom.ultimas')
             @endforeach
         </div>
     </div>
@@ -39,7 +39,7 @@
         <h2 class="titulo-categoria text-uppercase mt-5 mb-4">Mas votadas</h2>
         <div class="row">
             @foreach ($votadas as $receta)
-                @include('ui.inicio.categoria')
+                @include('custom.categoria')
             @endforeach
         </div>
     </div>
