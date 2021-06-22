@@ -86,7 +86,7 @@
             </div>
         </nav>
         
-        @include('ui.menubar.menu')
+        @include('custom.menu')
         @yield('hero')          
         <main class="py-4 mt-5 col-12">
             @yield('botones')
