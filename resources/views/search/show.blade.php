@@ -4,11 +4,11 @@
 @section('content')
 
     <div class="container">
-        @include('botonback')
+        @include('customtemplates.botonback')
         <h2 class="titulo-categoria text-uppercase mt-5 mb-4">Busqueda: {{ $busquedaReceta }}</h2>
         <div class="row">
             @foreach ($recetas as $receta)
-                @include('categoria')
+                @include('customtemplates.categoria')
             @endforeach
         </div>
     </div>
