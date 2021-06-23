@@ -18,7 +18,7 @@
     <div class="container-fluid">
         <h1 class="text-center mt-5 mb-5">Crear nueva Recetas</h1>
         <div class="row justify-content-center">
-            <x-create-recetas/>
+            <x-create-recetas :categoria="$categoria"/>
         </div>
     </div>
 

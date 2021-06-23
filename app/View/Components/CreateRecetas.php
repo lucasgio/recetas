@@ -6,14 +6,10 @@ use Illuminate\View\Component;
 
 class CreateRecetas extends Component
 {
-    /**
-     * Create a new component instance.
-     *
-     * @return void
-     */
-    public function __construct()
+    public $categoria;
+    public function __construct($categoria)
     {
-        //
+        $this->categoria= $categoria;
     }
 
     /**
