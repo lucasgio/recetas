@@ -8,7 +8,7 @@
 @endsection
 
 @section('botones')
-    @include('customtemplates.botonback')
+    <x-boton-back/>
 @endsection
 
 
