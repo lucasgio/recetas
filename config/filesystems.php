@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'default' => env('FILESYSTEM_DRIVER', 'local'),
+    'default' => env('FILESYSTEM_DRIVER', 's3'),
 
     /*
     |--------------------------------------------------------------------------
@@ -52,7 +52,17 @@ return [
             'endpoint' => env('AWS_ENDPOINT'),
         ],
 
+        // 'spaces' => [
+        //     'driver' => 's3',
+        //     'key' => 'GRU5NPTKKXQZBTHMWU5K',
+        //     'secret' => 'PtfpeRFQjEWFEFbH0i0F99Yn2mT5q3rzbdayzraoAs',
+        //     'endpoint' => 'fra1.digitaloceanspaces.com',
+        //     'region' => 'eu-central-1',
+        //     'bucket' => 'recetascubanas',
+        // ],
+
     ],
+
 
     /*
     |--------------------------------------------------------------------------

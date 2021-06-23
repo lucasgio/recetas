@@ -6,6 +6,7 @@ use App\Models\Perfil;
 use App\Models\Receta;
 use Illuminate\Http\Request;
 use Intervention\Image\Facades\Image;
+use Illuminate\Support\Facades\Storage;
 
 class PerfilController extends Controller
 {
@@ -64,10 +65,12 @@ class PerfilController extends Controller
         $perfil -> platos_preferidos = $request['platos_preferidos'];
         $perfil -> bio = $request['biografia'];
         if (request('imagen_perfil')) {
-            $rutaImg = $request['imagen_perfil']->store('perfil/user','public');
-            $img = Image::make( public_path("storage/{$rutaImg}"))->fit(200,200);
-            $perfil->imagen_perfil = $rutaImg;
-            $img->save();
+            $storagePath = $request->file(key:'imagen_perfil')->store('S3');
+            // $img = Image::make($rutaImg)->fit(200,200);
+            // $perfil->imagen_perfil = $rutaImg;
+            // $img->save();
+            return $storagePath;
+
         }  
 
         $perfil->save();
