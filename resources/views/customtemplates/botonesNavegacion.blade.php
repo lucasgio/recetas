@@ -30,7 +30,6 @@
       </div>
       {{-- <div class="col-xs-2 ">
         <a  
-        
             type="button" 
             href="{{ route('categoria.index', ['perfil'=> Auth::user()->id]) }}" 
             class="btn btn-outline-primary text-uppercase font-weight-bold mx-2">
