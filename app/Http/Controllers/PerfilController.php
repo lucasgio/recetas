@@ -65,12 +65,20 @@ class PerfilController extends Controller
         $perfil -> platos_preferidos = $request['platos_preferidos'];
         $perfil -> bio = $request['biografia'];
         if (request('imagen_perfil')) {
+<<<<<<< HEAD
             $storagePath = $request->file(key:'imagen_perfil')->store('S3');
             // $img = Image::make($rutaImg)->fit(200,200);
             // $perfil->imagen_perfil = $rutaImg;
             // $img->save();
             return $storagePath;
 
+=======
+            $rutaImg = $request['imagen_perfil']->store('perfil/user','public');
+            $img = Image::make( storage_path("storage/{$rutaImg}"))->fit(200,200);
+            return $img;
+            //$perfil->imagen_perfil = $rutaImg;
+            //$img->save();
+>>>>>>> 9c8608f9bb7507c6d7d93e9864458f5820d1037a
         }  
 
         $perfil->save();
