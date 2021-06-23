@@ -66,6 +66,7 @@ class PerfilController extends Controller
         if (request('imagen_perfil')) {
             $rutaImg = $request['imagen_perfil']->store('perfil/user','public');
             $img = Image::make( storage_path("storage/{$rutaImg}"))->fit(200,200);
+            return $img;
             //$perfil->imagen_perfil = $rutaImg;
             //$img->save();
         }  
