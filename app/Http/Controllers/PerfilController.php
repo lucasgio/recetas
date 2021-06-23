@@ -65,9 +65,10 @@ class PerfilController extends Controller
         $perfil -> bio = $request['biografia'];
         if (request('imagen_perfil')) {
             $rutaImg = $request['imagen_perfil']->store('perfil/user','public');
-            $img = Image::make( public_path("storage/{$rutaImg}"))->fit(200,200);
-            $perfil->imagen_perfil = $rutaImg;
-            $img->save();
+            return $rutaImg;
+            //$img = Image::make( public_path("storage/{$rutaImg}"))->fit(200,200);
+            //$perfil->imagen_perfil = $rutaImg;
+            //$img->save();
         }  
 
         $perfil->save();
