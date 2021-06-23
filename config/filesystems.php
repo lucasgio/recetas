@@ -44,12 +44,12 @@ return [
 
         's3' => [
             'driver' => 's3',
-            'key' => env('AWS_ACCESS_KEY_ID'),
-            'secret' => env('AWS_SECRET_ACCESS_KEY'),
-            'region' => env('AWS_DEFAULT_REGION'),
-            'bucket' => env('AWS_BUCKET'),
-            'url' => env('AWS_URL'),
-            'endpoint' => env('AWS_ENDPOINT'),
+            'key' => 'GRTDPD5NI77Q5R466J5R',
+            'secret' => 'VQ2Mr+1O3rnGE2HLZTFSrgxO/2NZR1N18XQlB/x3Zi4',
+            'region' => 'eu-central-1',
+            'bucket' => 'recetascubanas.fra1.digitaloceanspaces.com',
+            'url' => 'https://recetascubanas.fra1.digitaloceanspaces.com/',
+            'endpoint' => 'fra1.digitaloceanspaces.com',
         ],
 
         // 'spaces' => [
