@@ -66,10 +66,10 @@ class PerfilController extends Controller
         $perfil -> bio = $request['biografia'];
         if (request('imagen_perfil')) {
             $storagePath = $request->file(key:'imagen_perfil')->store('recetas','spaces');
-            // $img = Image::make($rutaImg)->fit(200,200);
-            // $perfil->imagen_perfil = $rutaImg;
-            // $img->save();
-            return $storagePath;
+            $img = Image::make($storagePath)->fit(200,200);
+            $perfil->imagen_perfil = $storagePath;
+            $img->save();
+            // return $storagePath;
 
         }  
 
