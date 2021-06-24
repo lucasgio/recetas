@@ -68,7 +68,7 @@ class RecetaController extends Controller
 
         // Resize de la imagen
         $rutaImg = $request->file('imagenes')->store(path:'recetas',options:'spaces');
-        $imgServerReceta = Storage::disk(options:'spaces')->url($rutaImg);
+        $imgServerReceta = Storage::disk(name:'spaces')->url($rutaImg);
         
 
         auth()->user()->receta()->create([
