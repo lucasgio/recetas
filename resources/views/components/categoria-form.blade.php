@@ -1,6 +1,6 @@
 <div class="col-md-4 mt-4">
     <div class="card shadow ">
-        <img class="card-top-img" src="/storage/{{ $receta->imagen }}" alt="Imagen recetas">
+        <img class="card-top-img" src="{{ $receta->imagen }}" alt="Imagen recetas">
         <div class="card-body">
             <p class="">{{ $receta->nombreReceta }}</p>
             <p>{!! Str::words(strip_tags($receta->preparacion), 20) !!}</p>

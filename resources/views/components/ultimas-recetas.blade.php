@@ -1,5 +1,5 @@
 <div class="card mx-1">
-    <img src="/storage/{{ $nueva->imagen }}" alt="Imagen receta">
+    <img src="{{ $nueva->imagen }}" alt="Imagen receta">
     <div class="card-body">
         <h3>{{ $nueva->nombreReceta }}</h3>
         <p>{!! Str::words(strip_tags($nueva->preparacion), 20) !!}</p>

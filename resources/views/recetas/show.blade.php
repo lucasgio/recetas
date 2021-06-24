@@ -12,7 +12,7 @@
     <article class="contenido-receta">
         <h3 class="text-center text-primary mt-5 mb-5">{{ $receta->nombreReceta }}</h3>
         <div class="imagen-receta">
-            <img src="/storage/{{ $receta->imagen }}" alt="Imagen de una receta" class="w-100">
+            <img src="{{ $receta->imagen }}" alt="Imagen de una receta" class="w-100">
         </div>
 
         <div class="receta-meta mt-3">

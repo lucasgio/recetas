@@ -67,16 +67,16 @@ class RecetaController extends Controller
         ]);
 
         // Resize de la imagen
-        $rutaImg = $request['imagenes']->store('upload-recetas','public');
-        $img = Image::make( public_path("storage/{$rutaImg}"))->fit(1200,550);
-        $img->save();
+        $rutaImg = $request->file('imagenes')->store(path:'recetas',options:'spaces');
+        $imgServerReceta = Storage::disk('spaces')->url($rutaImg);
+        
 
         auth()->user()->receta()->create([
 
             'nombreReceta' => $data['nombreReceta'],
             'ingredientes' => $data['ingredientes'],
             'preparacion'  => $data['preparacion'],
-            'imagen' => $rutaImg,
+            'imagen' => $imgServerReceta,
             'categoria_id' => $data['categoriaReceta'],
         
         ]);      

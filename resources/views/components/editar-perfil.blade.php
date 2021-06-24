@@ -84,7 +84,7 @@
         <div class="form-group">
             <label class="text-center" for="imagen_subida">Imagen</label>
         </br>
-            <img class="rounded-circle" src="/storage/{{$perfil->imagen_perfil}}" alt="Imagen de perfil">
+            <img class="rounded-circle" src="{{$perfil->imagen_perfil}}" alt="Imagen de perfil">
         </div>
     @endif
     <input type="submit" class="btn btn-primary mt-2" value="Guardar perfil">

@@ -98,7 +98,7 @@
                     />
                     <div class="imagen-actual mt-4">
                         <p class="font-weight-bold   text-primary px-2">Imagen Actual</p>
-                        <img class="w-100" src="/storage/{{$receta->imagen}}" alt="Imagenactual de la receta">
+                        <img class="w-100" src="{{$receta->imagen}}" alt="Imagenactual de la receta">
                     </div>
                     @error('imagenes')
                     <span class="invalid-feedback d-block" role="alert">
