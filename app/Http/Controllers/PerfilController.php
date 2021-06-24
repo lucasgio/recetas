@@ -69,8 +69,8 @@ class PerfilController extends Controller
             $img = $request->file('imagen_perfil');
             $imgFit = Image::make($img)->fit(200);
             $imgFit->stream();
-            Storage::disk('spaces')->put('perfil',$imgFit->__toString());
-            $imgServer = Storage::disk(name:'spaces')->url($storagePath);
+            $storagePath = Storage::disk('spaces')->put('perfil',$imgFit->__toString());
+            $imgServer   = Storage::disk(name:'spaces')->url($storagePath);
             $perfil->imagen_perfil = $imgServer;
             // $storagePath = $request->file(key:'imagen_perfil')->store(path:'perfil',options:'spaces');
         }  
