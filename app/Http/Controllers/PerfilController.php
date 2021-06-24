@@ -7,6 +7,7 @@ use App\Models\Receta;
 use Illuminate\Http\Request;
 use Intervention\Image\Facades\Image;
 use Illuminate\Support\Facades\Storage;
+use Symfony\Component\Console\Input\Input;
 
 class PerfilController extends Controller
 {
@@ -64,9 +65,11 @@ class PerfilController extends Controller
         $perfil -> platos_preferidos = $request['platos_preferidos'];
         $perfil -> bio = $request['biografia'];
         if (request('imagen_perfil')) {
-            $storagePath = $request->file(key:'imagen_perfil')->store(path:'perfil',options:'spaces');
+
+            Image::make(Input::file('imagen_perfil'))->fit(200,200)->store(path:'perfil',options:'spaces');
             $imgServer = Storage::disk(name:'spaces')->url($storagePath);
             $perfil->imagen_perfil = $imgServer;
+            // $storagePath = $request->file(key:'imagen_perfil')->store(path:'perfil',options:'spaces');
         }  
 
         $perfil->save();
