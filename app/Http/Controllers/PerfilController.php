@@ -20,8 +20,8 @@ class PerfilController extends Controller
     public function show(Perfil $perfil)
     {
         $receta = Receta::where('user_id',$perfil->user_id)->paginate(3);
-
-        return view('perfil.show',compact('perfil','receta'));
+        $imgPerfil = Storage::disk('spaces')->response('recetas / '. $perfil->imagen_perfil);
+        return view('perfil.show',compact('perfil','receta','imgPerfil'));
         
     }
 
