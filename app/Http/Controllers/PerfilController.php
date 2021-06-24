@@ -65,7 +65,7 @@ class PerfilController extends Controller
         $perfil -> bio = $request['biografia'];
         if (request('imagen_perfil')) {
             $storagePath = $request->file(key:'imagen_perfil')->store(path:'perfil',options:'spaces');
-            $imgServer = Storage::disk(option:'spaces')->url($storagePath);
+            $imgServer = Storage::disk(options:'spaces')->url($storagePath);
             $perfil->imagen_perfil = $imgServer;
         }  
 
