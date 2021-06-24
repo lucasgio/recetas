@@ -65,16 +65,14 @@ class PerfilController extends Controller
         $perfil -> platos_preferidos = $request['platos_preferidos'];
         $perfil -> bio = $request['biografia'];
         if (request('imagen_perfil')) {
-
-            $file = request()->file('imagen_perfil');
-            $imageName = $file->getClientOriginalName();
+            // Fit img and Upload to Digital Ocean
+            $file = request() -> file('imagen_perfil');
+            $imageName = $file -> getClientOriginalName();
             $img = Image::make($file)->fit(200);
             $resource = $img->stream()->detach();
-            $path = Storage::disk('spaces')->put(
-                'perfil/' . $imageName,
-                $resource
-            );
-            // $storagePath = $request->file(key:'imagen_perfil')->store(path:'perfil',options:'spaces');
+            $imgUploadServer = Storage::disk('spaces')->put('perfil/' . $imageName,$resource);
+            $imgServer =Storage::disk(name:'spaces')->url($imgUploadServer);
+            $perfil->imagen_perfil = $imgServer;
         }  
 
         $perfil->save();
