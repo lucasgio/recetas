@@ -30,7 +30,7 @@
                     @foreach ($receta as $recetas)
                         <div class="col-md-4 mb-4">
                             <div class="card">
-                                <img class="card-img-top" src="/storage/{{ $recetas->imagen }}" alt="Imagen de recetas">
+                                <img class="card-img-top" src="{{ $recetas->imagen }}" alt="Imagen de recetas">
                                 <div class="card-body mt-2">
                                     <h6>{{ $recetas->nombreReceta }}</h6>
                                     <a type="button" class="btn btn-outline-primary text-uppercase"
