@@ -71,7 +71,7 @@ class PerfilController extends Controller
             $img = Image::make($file)->fit(200);
             $resource = $img->stream()->detach();
             $imgUploadServer = Storage::disk('spaces')->put('perfil/' . $imageName,$resource);
-            $imgServer =Storage::disk(name:'spaces')->url($imgUploadServer);
+            $imgServer =Storage::disk(name:'spaces')->response(path:'perfil/ '.$imageName);
             $perfil->imagen_perfil = $imgServer;
         }  
 
