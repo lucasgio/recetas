@@ -20,7 +20,6 @@ class PerfilController extends Controller
     public function show(Perfil $perfil)
     {
         $receta = Receta::where('user_id',$perfil->user_id)->paginate(3);
-
         return view('perfil.show',compact('perfil','receta'));
         
     }
@@ -65,8 +64,13 @@ class PerfilController extends Controller
         $perfil -> platos_preferidos = $request['platos_preferidos'];
         $perfil -> bio = $request['biografia'];
         if (request('imagen_perfil')) {
+<<<<<<< HEAD
             $storagePath = $request->file(key:'imagen_perfil')->store(path:'perfil',options:'spaces');
             $imgServer = Storage::disk(option:'spaces')->url($storagePath);
+=======
+            $storagePath = $request->file(key:'imagen_perfil')->store('recetas','spaces');
+            $imgServer = Storage::disk('spaces')->url($storagePath);
+>>>>>>> dd022a8f18a70c967e598f9c2daf2f2c1cc0146a
             $perfil->imagen_perfil = $imgServer;
         }  
 

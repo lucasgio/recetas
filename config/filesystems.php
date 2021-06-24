@@ -59,7 +59,11 @@ return [
             'region' => env('DO_SPACES_REGION'),
             'bucket' => env('DO_SPACES_BUCKET'),
             'url'    => env('DO_URL'),
+<<<<<<< HEAD
             'visibility' => 'public' 
+=======
+            'visibility' => 'public'
+>>>>>>> dd022a8f18a70c967e598f9c2daf2f2c1cc0146a
         ],
 
     ],
