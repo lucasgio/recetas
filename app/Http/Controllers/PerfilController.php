@@ -70,7 +70,7 @@ class PerfilController extends Controller
             $imageName = $file->getClientOriginalName();
             $img = Image::make($file)->fit(200);
             $resource = $img->stream()->detach();
-            $path = Storage::disk('s3')->put(
+            $path = Storage::disk('spaces')->put(
                 'perfil/' . $imageName,
                 $resource
             );
