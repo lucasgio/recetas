@@ -6,7 +6,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-5">
-                    <img class="rounded-circle" src="/storage/{{ $perfil->imagen_perfil }}" alt="">
+                    <img class="rounded-circle" src="{{ $perfil->imagen_perfil }}" alt="">
                     <div class="biografia mt-5">
                         <p class="text-primary">Sobre ti</p>
                         {!! $perfil->bio !!}
