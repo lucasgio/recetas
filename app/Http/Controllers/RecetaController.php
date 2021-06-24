@@ -64,7 +64,7 @@ class RecetaController extends Controller
             'categoriaReceta' => 'required',
             'preparacion' => 'required',
             'ingredientes' => 'required',
-            'imagenes'=>'required|image'
+            'imagenes'=>'required|image|max:1000'
         ]);
 
         // Fit img and Upload to Digital Ocean
