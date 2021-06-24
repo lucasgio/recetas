@@ -66,12 +66,14 @@ class PerfilController extends Controller
         $perfil -> bio = $request['biografia'];
         if (request('imagen_perfil')) {
 
-            $img = $request->file('imagen_perfil');
-            $imgFit = Image::make($img)->fit(200);
-            $imgFit->stream();
-            $storagePath = Storage::disk('spaces')->put('perfil/ '.$imgFit,$imgFit->__toString());
-            $imgServer   = Storage::disk(name:'spaces')->url($storagePath);
-            $perfil->imagen_perfil = $imgServer;
+            $file = request()->file('imagen_perfil');
+            $imageName = $file->getClientOriginalName();
+            $img = Image::make($file)->fit(200);
+            $resource = $img->stream()->detach();
+            $path = Storage::disk('s3')->put(
+                'perfil/' . $imageName,
+                $resource
+            );
             // $storagePath = $request->file(key:'imagen_perfil')->store(path:'perfil',options:'spaces');
         }  
 
