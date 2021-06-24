@@ -65,16 +65,20 @@ class PerfilController extends Controller
         $perfil -> platos_preferidos = $request['platos_preferidos'];
         $perfil -> bio = $request['biografia'];
         if (request('imagen_perfil')) {
+            
             // Fit img and Upload to Digital Ocean
             $file = request() -> file('imagen_perfil');
+            // Obtain name of file 
             $imageName = $file -> getClientOriginalName();
+            // Intervation Image
             $img = Image::make($file)->fit(200);
             $resource = $img->stream()->detach();
+            // Upload and get image
             $imgUploadServer = Storage::disk('spaces')->put('perfil/' . $imageName,$resource);
             $imgServer =Storage::disk(name:'spaces')->url('perfil/'.$imageName);
+            // Save to DDBB
             $perfil->imagen_perfil = $imgServer;
         }  
-
         $perfil->save();
         return redirect()->action('RecetaController@index');    
         

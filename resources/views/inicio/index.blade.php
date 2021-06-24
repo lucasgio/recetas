@@ -16,7 +16,7 @@
                     <p class="texto-buscar text-light text-uppercase">
                         Encuentra una receta para tu proxima comida
                     </p>
-                    <input class="form-control" type="search" placeholder="Busca tu sisguinte receta" name="buscar" id="buscar">
+                    <input class="form-control" type="search" placeholder="Busca tu siguiente receta" name="buscar" id="buscar">
                 </div>
             </div>    
         </form> 
@@ -51,8 +51,8 @@
          <div class="d-inline-flex p-2 bd-highlight">
              <a class="nav-link text-primary mx-5" href="https://lucasgio.github.io/portafolio/" target="_blank">Desarrollado por Iosvany Alvarez.</a> 
              <a class="nav-link text-primary" href="{{ route('sobre.about') }}" >Sobre Recetas</a>
-             <a class="nav-link text-primary" href="{{ route('preguntas.question') }}" > Preguntas y Respuestas</a>
-             <a class="nav-link text-primary" href="{{ route('contactos.contact') }}" >Contactos</a>
+             {{-- <a class="nav-link text-primary" href="{{ route('preguntas.question') }}" > Preguntas y Respuestas</a> --}}
+             {{-- <a class="nav-link text-primary" href="{{ route('contactos.contact') }}" >Contactos</a> --}}
          </div>
     </div>
   </footer>

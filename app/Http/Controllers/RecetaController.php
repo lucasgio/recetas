@@ -67,17 +67,24 @@ class RecetaController extends Controller
             'imagenes'=>'required|image'
         ]);
 
-        // Resize de la imagen
-        $rutaImg = $request->file('imagenes')->store(path:'recetas',options:'spaces');
-        $imgServerReceta = Storage::disk(name:'spaces')->url($rutaImg);
-        
+        // Fit img and Upload to Digital Ocean
+        $file = request() -> file('imagenes');
+        // Obtain name of file 
+        $imageName = $file -> getClientOriginalName();
+        // Intervation Image
+        $img = Image::make($file)->fit(1200,600);
+        $resource = $img->stream()->detach();
+        // Upload and get image
+        $imgUploadServer = Storage::disk('spaces')->put('recetas/' . $imageName,$resource);
+        $imgServer =Storage::disk(name:'spaces')->url('recetas/'.$imageName);
+
 
         auth()->user()->receta()->create([
 
             'nombreReceta' => $data['nombreReceta'],
             'ingredientes' => $data['ingredientes'],
             'preparacion'  => $data['preparacion'],
-            'imagen' => $imgServerReceta,
+            'imagen' => $imgServer,
             'categoria_id' => $data['categoriaReceta'],
         
         ]);      
